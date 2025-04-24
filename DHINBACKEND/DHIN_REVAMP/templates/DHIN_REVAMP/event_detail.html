@@ -1,0 +1,102 @@
+{% extends 'DHIN_REVAMP/base.html' %}
+
+{% load static %}
+{% block content %}
+
+<style>
+
+.container {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+            
+        }
+
+.card-title{
+    text-align: center;
+    margin-bottom: auto;
+}
+
+.custom-back-btn {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #005AFF;
+    border-radius: 25px;
+    color: #005AFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.custom-back-btn:hover {
+    background-color: #005AFF;
+    color: #fff;
+}
+
+.custom-spacing {
+    margin-top: 3rem; /* adjust as needed */
+}
+
+    /* Responsive adjustments for small screens */
+        
+        
+    @media (max-width: 767px) {
+    
+    .footer-content {
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .newsletter-section {
+            width: 100%;
+        }
+        
+        .footer-bottom {
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+    }
+</style>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+
+                <h2 class="card-title mb-3" style="color: #001e42;">
+                    {{ event.title }}
+                </h2>
+    
+                <article class="card border-0 shadow-sm">
+                    {% if event.cover_image %}
+                        <img src="{{ event.cover_image.url }}" class="img-fluid" width="1500px" height="544px" alt="{{ event.title }}" style="object-fit: cover; max-width: 100%;">
+                    {% endif %}
+    
+                    
+    
+                    <p class="text-muted mb-4">
+                        Published on {{ event.date_published|date:"F d, Y" }}
+                    </p>
+    
+                    <div class="card-text mb-4">
+                        {{ event.description }}
+                    </div>
+    
+                    <div class="card-text">
+                        {{ event.content|safe }}
+                    </div>
+                </article>
+    
+                <div class="custom-spacing mt-4">
+                    <a href="{% url 'event_list' %}" class="custom-back-btn">
+                         Back to All Events
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}

@@ -1,0 +1,158 @@
+{% extends 'DHIN_REVAMP/base.html' %}
+{% load static %}
+{% block content %} 
+    <style>
+       
+      
+        
+        /* Section styles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+           
+        }
+        
+        .section-container {
+            padding: 1.5rem 1rem;
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* Hero image */
+        .hero-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            max-height: 450px;
+        }
+        
+        /* Section styling with left border */
+        .about-section, .gain-section {
+            border-left: 5px solid #0a3d82;
+            padding-left: 15px;
+            margin-left: 10px;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        /* Responsive adjustments for small screens */
+        
+        
+        @media (max-width: 767px) {
+    
+        .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .newsletter-section {
+                width: 100%;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+        }
+   
+    </style>
+
+    <!-- Page content -->
+    <main class="container-fluid px-0">
+        <section class="section-container">
+            <h1 class="section-title">DHIN Community</h1>
+            <p class="card-text">Collaborating to Advance Digital Health Interoperability Together.</p>
+        </section>
+        
+        <!-- Hero Image -->
+        <div class="px-0">
+            <img src="{% static 'images/pic38.JPG' %}" alt="DHIN Community Group" class="img-fluid hero-image w-100">
+        </div>
+        
+        <div class="container py-4">
+            <!-- What We Are About Section -->
+            <div class="row mb-4">
+                <div class="col-12 about-section">
+                    <h2 class="section-title">What we are About</h2>
+                    <p>
+                        The Digital Health Interoperability DHIN Community (DHINC) is a collaborative forum for professionals, 
+                        organizations, and stakeholders passionate about improving healthcare data exchange. Our mission is to 
+                        share knowledge, drive innovation, and solve real-world challenges in healthcare interoperability.
+                    </p>
+                </div>
+            </div>
+
+            <!-- What You Stand to Gain Section -->
+            <div class="row mb-4">
+                <div class="col-12 gain-section">
+                    <h2 class="section-title">What you stand to Gain</h2>
+                    
+                    <div class="gain-item">
+                        <strong>Information Sessions:</strong>
+                        <span>Participate in thought-provoking discussions on topics such as EHR interoperability, telemedicine, patient data security, and more.</span>
+                    </div>
+                    
+                    <div class="gain-item">
+                        <strong>Interactive Events:</strong>
+                        <span>Attend webinars, workshops, and meetups led by industry experts, addressing cutting-edge digital health challenges.</span>
+                    </div>
+                    
+                    <div class="gain-item">
+                        <strong>Innovation Spotlights:</strong>
+                        <span>Explore and share innovations that are revolutionizing healthcare delivery and patient outcomes.</span>
+                    </div>
+                    
+                    <div class="gain-item">
+                        <strong>Community Spotlights:</strong>
+                        <span>Showcase your expertise, projects, and successes, and learn from others' experiences.</span>
+                    </div>
+                    
+                    <div class="gain-item">
+                        <strong>Ask the experts:</strong>
+                        <span>Have burning questions? Our community is a place to seek advice and insights from those who've been there.</span>
+                    </div>
+                    
+                    <div class="gain-item">
+                        <strong>Exclusive Updates:</strong>
+                        <span>Be the first to know about DHIN's initiatives, research findings, and industry partnerships.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Hero Image -->
+            <div class="px-0 mb-4">
+                <img src="{% static 'images/pic40.jpg' %}" alt="DHIN Community Event" class="img-fluid hero-image w-100">
+            </div>
+            
+            <!-- Who Can Join Us Section -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="join-section">
+                        <div class="join-content">
+                            <h2 class="section-title">Who can join us</h2>
+                            
+                            <p class="mb-3">Membership is free and open to:</p>
+                            
+                            <ul class="membership-list">
+                                <li>Healthcare Professionals</li>
+                                <li>Technology Innovators</li>
+                                <li>Researchers and Academics</li>
+                                <li>Policy Makers</li>
+                                <li>Students and all Digital Health Enthusiasts and Interns</li>
+                            </ul>
+                            
+                            <div class="mt-4 text-left">
+                                <a href="{% url 'register_user' %}" class="btn btn-primary">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   
+{% endblock  %}

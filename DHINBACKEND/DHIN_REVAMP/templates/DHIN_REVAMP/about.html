@@ -1,0 +1,359 @@
+
+{% extends 'DHIN_REVAMP/base.html' %}
+{% load static %}
+
+{% block content %} 
+    <style>
+       
+        .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .section-container {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            padding: none;
+        }
+      
+        .mission-principles-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 15px;
+        }
+
+        .mission-content, 
+        .principles-content {
+            position: relative;
+            padding-left: 30px;
+            margin-left: 15px;
+        }
+
+        .mission-content::before,
+        .principles-content::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #0056b3; /* Primary blue color */
+        }
+
+        .mission-content h2,
+        .principles-content h2 {
+            
+            margin-bottom: 20px;
+          
+        }
+
+        .principle {
+            margin-bottom: 25px;
+        }
+
+        .principle h4 {
+            color: #0d0e10;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* Core Values Section Styles */
+        .core-values-section {
+            padding: 40px 0;
+            position: relative;
+        }
+
+        .core-values-content {
+            position: relative;
+            padding-left: 40px;
+            margin-left: 15px;
+        }
+
+        .core-values-content::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #0056b3;
+        }
+
+        .core-values-content h2 {
+            
+            color: #012862;
+            margin-bottom: 20px;
+        }
+
+        .core-values-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .core-values-list li {
+            margin-bottom: 15px;
+        }
+
+        .core-values-list li strong {
+            color: #012862;
+            margin-right: 10px;
+        }
+
+        /* Governance Structure Section Styles */
+        .governance-section {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #CEF0FF;
+    gap: 10px;
+    align-items: center
+    
+    
+}
+        .governance-image-container {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            overflow: hidden;
+            padding-top: 60px;
+            
+        }
+
+        .governance-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            
+        }
+
+        .governance-text h2 {
+         margin-bottom: 20px;
+        
+        }
+
+        .governance-text h3 {
+            color: #012862;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        
+
+    
+        .trustee-image {
+            width: 357px;
+            height: 357px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .trustee-name {
+            color: #012862;
+            font-weight: bold;
+            margin-top: 10px;
+            
+        }
+        .join-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .join-section h2 {
+            color: #012862;
+            font-size: 20px; 
+          
+        }
+        .trustee-name h2 {
+            color: #012862;
+            font-size: 18px;
+           
+        }
+
+    
+       
+
+
+        @media (max-width: 768px) {
+
+            .navbar-nav {
+            text-align: left;
+            padding: 0.5rem 0;
+            }
+    
+            .nav-item {
+            margin: 8px 0;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .newsletter-section {
+                width: 100%;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+       }
+    </style>
+
+            
+
+     <!-- Page content -->
+     <main>
+        <section class="section-container">
+            <h1 class="section-title " style="color: #012862;">About DHIN</h1>
+            <p class="card-text">Welcome to the Digital Health Interoperability Network (DHIN), where our commitment to universal health coverage drives us to foster an ecosystem of seamless integration.</p>
+        </section>
+
+        <div class="row justify-content-center my-4">
+            <div class="col-auto">
+                <img src="{% static 'images/pic52.jpeg' %}" alt="DHIN Hero Image" class="hero-image img-fluid" width="1334px" height="544px">
+            </div>
+        </div>
+
+        
+
+        <section class="mission-principles-section">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mission-content">
+                        <h2>Our Mission</h2>
+                        <p>At the Digital Health Interoperability Network (DHIN), our mission is to accelerate universal health coverage by fostering an enabling environment for seamless integration of diverse digital health interventions.</p>
+                        <p>We are dedicated to creating an ecosystem where standardized digital solutions can seamlessly interoperate, enabling health stakeholders to access and utilize critical information efficiently.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="principles-content">
+                        <h2>Guiding Principles</h2>
+                        
+                        <div class="principle">
+                            <h4>Disruptive</h4>
+                            <p>We're not afraid to shake things up. Our drive to disrupt traditional approaches to health interoperability by bringing stakeholders together and doing.</p>
+                        </div>
+                        
+                        <div class="principle">
+                            <h4>Evidence-Based Problem Solving</h4>
+                            <p>We roll up our sleeves and dig into challenges. We drive evidence of standards and interoperability. Armed with evidence, we tackle issues head-on, employing hands-on practical approaches. We believe in learning from failures and seeing setbacks as opportunities.</p>
+                        </div>
+                        
+                        <div class="principle">
+                            <h4>Collaborative & Peer-Driven</h4>
+                            <p>We are not just a team; we are a community. We believe in co-creation and the power of collaboration. Our peer-driven approach ensures that diverse voices contribute to approaches that truly work for everyone.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center my-4">
+                <div class="col-auto">
+                    <img src="{% static 'images/pic6.jpg' %}" alt="DHIN Hero Image" class="hero-image img-fluid">
+                </div>
+            </div>
+
+             <!-- Core Values Section -->
+    <section class="core-values-section container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="core-values-content">
+                    <h2>Our Core Values</h2>
+                    <ul class="core-values-list">
+                        <li><strong>Integrity:</strong> We uphold honesty and transparency in all actions.</li>
+                        <li><strong>Equity:</strong> We ensure fairness and inclusivity for all.</li>
+                        <li><strong>Excellence:</strong> We deliver high-quality solutions that surpass expectations.</li>
+                        <li><strong>Learning:</strong> We foster continuous growth and the exploration of new ideas.</li>
+                        <li><strong>Trust:</strong> We build and maintain confidence through integrity.</li>
+                        <li><strong>Transparency:</strong> We communicate openly and take responsibility for our actions.</li>
+                        <li><strong>Reliability:</strong> We consistently deliver on our commitments</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance Structure Section -->
+    <section class="governance-section container-fluid py-5">
+        <div class="row">
+            <div class="col-md-6 governance-text">
+                <h2>Governance Structure</h2>
+                
+                <h3>Trustees</h3>
+                <p>The DHIN trustee board is made up of three co-conveners with over 50 years of combined experience in clinical practice, engineering, computer science, and hands-on leading and driving digital health program design, collaboration, and implementation in a few dozen countries, mainly in Africa.</p>
+                
+                <h3>Advisory Board</h3>
+                <p>DHIN Advisory Board is made up of experts in public health, clinical practice, ICT, and digital health. Members are handpicked through nominations or applications, fostering a rich tapestry of perspectives.</p>
+                
+                <h3>DHIN Community of Practice (CoP)</h3>
+                <p>We welcome healthcare professionals, clinicians, government, academia, developers, and other stakeholders who share a passionate commitment for connected healthcare. If you possess experience in digital or health interoperability projects, we eagerly invite you to join.</p>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="governance-image-container">
+                    <img src="{% static 'images/pic53.jpg' %}" alt="DHIN Governance Structure" class="governance-image img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="join-section">
+        <h2 class="mb-4">Board of Trustees</h2>
+
+    <div class="container">
+        <div class="row justify-content-center text-center mt-5">
+            <div class="col-md-4">
+                <img src="{% static 'images/pic55.jpeg' %}" alt="Emeka Chukwu" class="img-fluid trustee-image">
+                <h4 class="trustee-name mt-3">
+                    <a href="https://www.linkedin.com/in/emeka-chukwu-60697056/" style="text-decoration: none; color: inherit;">Emeka Chukwu</a>
+                </h4>
+                
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/pic54.jpg' %}" alt="Juliet Odogwu" class="img-fluid trustee-image">
+                <h4 class="trustee-name mt-3">
+                    <a href="https://www.linkedin.com/in/juliet-odogwu/" style="text-decoration: none; color: inherit;">Juliet Odogwu</a>
+                </h4>
+                
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/pic39.png' %}" alt="Iniobong Ekong" class="img-fluid trustee-image">
+                <h4 class="trustee-name mt-3">
+                    <a href="https://www.linkedin.com/in/iniobong-ekong-1a70a240/" style="text-decoration: none; color: inherit;">Dr Iniobong Ekong</a>
+                </h4>
+               
+                
+                
+            </div>
+        </div>
+        
+
+        <div class="join-section">
+            <h2 class="mb-4">Ready to Join?</h2>
+            <p class="mb-4">
+                Be a part of our growing community and play a role in revolutionizing healthcare<br>
+                through collaboration and peer learning. Join us today to help shape the future<br>
+                of healthcare!
+            </p>
+            <a href="{% url 'register_user' %}">
+                <button class="btn btn-primary">Register</button>
+            </a>
+        </div>
+    </div>
+
+     
+          
+    </main>
+    {% endblock  %}

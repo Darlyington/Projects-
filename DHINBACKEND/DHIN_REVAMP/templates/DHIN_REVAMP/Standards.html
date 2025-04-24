@@ -1,0 +1,131 @@
+{% extends 'DHIN_REVAMP/base.html' %}
+{% load static %}
+{% block content %} 
+    <style>
+        :root {
+            --primary-color: #012862;
+            --secondary-color: #faf8f9;
+        }
+        
+          body {
+            background-color:rgb(233, 249, 255) ;
+            color: black;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+
+            p {
+            color: #0d0f11; /* Slightly lighter blue color */
+            font-size: 16px; /* Font size */
+
+             /* Specific styles for h1 */
+            h1 {
+            color: #012862 ;
+            font-size: 25px; /* Larger font size for h1 */
+            font-weight: medium; /* Bold text */
+            }
+            }
+            
+            
+        }
+
+h1 {
+            color: #012862;
+            font-size: 30px;
+            font-weight: bold;
+        }
+             h2{
+                color: #012862;
+                font-size: 20px;
+                font-weight: medium;
+             }
+.custom-img-1 {
+            width: 340px;
+            height: 398px;
+            object-fit: cover;
+            margin-bottom: 40PX;
+            max-width: 100%;
+        }
+        .custom-img-2 {
+            width: 600px;
+            height: 398px;
+            object-fit: cover;
+            margin-bottom: 40PX;
+            max-width: 100%;
+        }
+        .custom-img-3 {
+            width: 340px;
+            height: 398px;
+            object-fit: cover;
+            margin-bottom: 40PX;
+            max-width: 100%;
+        }
+        
+        .standards-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        .section-title {
+            
+            margin-bottom: 30px;
+        }
+        
+   
+        @media (max-width: 768px) {
+            .navbar-nav {
+            text-align: left;
+            padding: 0.5rem 0;
+            }
+    
+            .nav-item {
+            margin: 8px 0;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .newsletter-section {
+                width: 100%;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+
+         
+
+        }
+    </style>
+
+     <!-- Page content -->
+     <main>
+        <div class="container-fluid standards-section">
+            <div class="container">
+                <h1 class="text-center section-title">Standards</h1>
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-4 text-center">
+                        <img src="{% static 'images/pic56.JPG' %}" alt="Digital Health Standard 1" class="custom-img-1 img-fluid rounded shadow ">
+                        <h2>Global Standard</h2>
+                        <p class="mt-4">Embracing universally recognized digital health standards to ensure seamless interoperability and data exchange on a global scale.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="{% static 'images/pic57.JPG' %}" alt="Digital Health Standard 2" class="custom-img-2 img-fluid rounded shadow">
+                        <h2>Regional Standards</h2>
+                        <p class="mt-4">Implementing adaptable digital health standards that cater to specific regional healthcare needs, fosters efficient collaboration among neighboring healthcare ecosystems.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="{% static 'images/pic58.JPG' %}" alt="Digital Health Standard 3" class="custom-img-3 img-fluid rounded shadow">
+                        <h2>National Standards</h2>
+                        <p class="mt-4">Upholding nationally endorsed digital health standards will create a unified framework for healthcare data, strengthening the foundation of our healthcare infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    {% endblock  %} 
+
+   

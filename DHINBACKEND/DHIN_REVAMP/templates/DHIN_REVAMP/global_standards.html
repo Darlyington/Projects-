@@ -1,0 +1,73 @@
+{% extends 'DHIN_REVAMP/base.html' %}
+{% load static %}
+{% block content %} 
+   
+<style>
+
+h1 {
+            color: #012862;
+            font-size: 30px;
+            font-weight:bold;
+        }
+          
+         .container
+         {
+            margin-bottom: 10px;
+            margin-top: 5px;
+         }
+        
+  
+        @media (max-width: 768px) {
+
+            .navbar-nav {
+            text-align: left;
+            padding: 0.5rem 0;
+            }
+    
+            .nav-item {
+            margin: 8px 0;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .newsletter-section {
+                width: 100%;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+
+         
+
+        }
+    </style>
+
+            
+
+     <!-- Page content -->
+     <main>
+        <div class="container-fluid standards-section">
+            <div class="container">
+                <h1 class="text-center section-title py-3 ">GLOBAL STANDARDS</h1>
+            <p class=" ">Countries are encouraged to use open standards for health data exchange. Standard means that it has a common schema for health data, calculations, and information exchange, and open means that different countries and providers can access and use them, instead of countries each developing their own. Open standards that have emerged in the health sector, include these:
+                Digital Imaging and Communications in Medicine (DICOM):DICOM is the international standard to transmit, store, retrieve, print, process, and display medical imaging information.
+                Fast Healthcare Interoperability Resource (FHIR):FHIR, based on HL7, is an interoperability standard intended to facilitate the exchange of healthcare information between healthcare providers, patients, caregivers, payers, researchers, and anyone else involved in the healthcare ecosystem. It consists of 2 main parts – a content model in the form of ‘resources’, and a specification for the exchange of these resources.
+                Health Level Seven (HL7):HL7 is a comprehensive framework and related standards for the exchange, integration, sharing, and retrieval of electronic health information that supports clinical practice and the management, delivery and evaluation of health services. "Level Seven" refers to the seventh level of the International Organization for Standardization’s seven-layer communications model for open systems interconnection.
+                International Classification of Diseases (ICD):ICD is the international standard for the systematic recording, reporting, analysis, interpretation and comparison of mortality and morbidity data.
+                International Classification of Health Interventions (ICHI):ICHI is a common tool for reporting and analyzing health interventions for clinical and statistical purposes. ICHI covers interventions carried out by a broad range of providers across the full scope of health systems.
+                Logical Observation Identifiers Names and Codes (LOINC):LOINC is an international standard for identifying health measurements, observations, and documents.
+                Systematized Nomenclature of Medicine Clinical Terms (SNOMED CT):SNOMED- CT is a set of standards for a codified language that represents groups of clinical terms. This enables healthcare information to be exchanged globally for the benefit of patients and other stakeholders.
+                Internation Standards Organization ISO TC215:A range of Health Informatics standards authored or adopted by the Technical Committee of the ISO.
+            </p>
+        </div>
+    </main>
+
+
+
+
+    {% endblock  %} 

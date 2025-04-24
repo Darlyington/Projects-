@@ -1,0 +1,145 @@
+{% extends 'DHIN_REVAMP/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  
+    
+    .main-content {
+        text-align: center;
+        margin-top: 100px;
+    }
+    
+    .btn-open-modal {
+        background-color: #0d6efd;
+        color: white;
+        font-size: 18px;
+        padding: 10px 30px;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    .modal-header {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    
+    .modal-title {
+        font-weight: bold;
+        font-size: 28px;
+    }
+    
+    .form-floating {
+        margin-bottom: 20px;
+    }
+    
+    .form-floating label {
+        color: #6c757d;
+    }
+    
+    .register-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        background-color: #0d6efd;
+        border: none;
+    }
+
+
+    @media (max-width: 768px) {
+
+        .navbar-nav {
+            text-align: left;
+            padding: 0.5rem 0;
+            }
+    
+            .nav-item {
+            margin: 8px 0;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .newsletter-section {
+                width: 100%;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+        }
+</style>
+
+<div class="container main-content">
+    <h1>Welcome to DHIN Website</h1>
+    <p class="mb-5">Click the button below to register your account </p>
+    <button class="btn btn-open-modal mb-5" data-bs-toggle="modal" data-bs-target="#registrationModal">
+        Register Now
+    </button>
+</div>
+
+<!-- Registration Modal -->
+<div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registrationModalLabel">Registration Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="registrationForm" method="post" action="{% url 'register_user' %}">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required>
+                                <label for="first_name">First Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required>
+                                <label for="last_name">Last Name</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    
+                    <div class="form-floating">
+                        <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="Phone Number" required>
+                        <label for="phone_number">Phone Number</label>
+                    </div>
+                    
+                    <div class="form-floating">
+                        <select class="form-select" id="occupation" name="occupation" required>
+                            <option value="" selected disabled></option>
+                            <option value="Healthcare Professionals">Healthcare Professionals</option>
+                            <option value="Technology Innovators">Technology Innovators</option>
+                            <option value="Researchers and Academics">Researchers and Academics</option>
+                            <option value="Policy Makers">Policy Makers</option>
+                            <option value="Students and Digital Health Enthusiasts">Students and Digital Health Enthusiasts</option>
+                            <option value="Interns">Interns</option>
+                        </select>
+                        <label for="occupation">Select Occupation</label>
+                    </div>
+                    
+                    <!-- Hidden username field (auto-generated or optional) -->
+                    <input type="hidden" name="username" value="{{ email }}">
+                    
+                    <button type="submit" class="btn btn-primary register-btn mt-3">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
